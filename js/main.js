@@ -26,11 +26,13 @@ const h = function(tag,type) {
 //------------------------Navbar Functions------------------------------
 
 function openNav() {
-  document.getElementById("mySidenav").style.width = "450px";
+  document.getElementById("mySidenav").style.width = "350px";
+  document.getElementById("mySidenav").classList.add("shadow");
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenav").classList.remove("shadow");
 }
 
 //------------------------Debug Commands------------------------------
