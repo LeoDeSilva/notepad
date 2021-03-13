@@ -10,11 +10,13 @@ function format(command, value){
     document.execCommand(command, false, value)
 }
 const inCode = function() {
+  //create code block with print("hello world")
   document.designMode = 'on'
   document.execCommand('insertHTML', false, `<div class="code">` + 'print("hello world")' + `</div>`)
   document.designMode = 'off'
 }
 const h = function(tag,type) {
+  //create heading tag with highlighted text
   document.designMode = 'on'
   document.execCommand('insertHTML', false, `<${tag} class="${type}">` + window.getSelection().toString() + `</${tag}>`)
   document.designMode = 'off'
@@ -45,6 +47,7 @@ setInterval(function(){
 //------------------------Storing Notes------------------------------
 
 function get_notes(){
+    //fill notes array with storage (local storage???)
     //notes = JSON.parse(window.localStorage.getItem("notes"))
     t = title.innerHTML
     notes[t] = note.innerHTML
@@ -53,6 +56,7 @@ function get_notes(){
 }
 
 function save_HTML(){
+    //Save Content of note, index and title
     //get inner HTML
     text = note.innerHTML
     //save into dictionary with Titles

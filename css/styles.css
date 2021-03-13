@@ -172,7 +172,11 @@ html, body{
 }
 .login-btn:hover{
     color: white;
-    filter: brightness(0.92);
+    filter: brightness(0.94);
+}
+
+.login-btn:active{
+    filter: brightness(0.85);
 }
 @media (max-width: 1540px) {
     .buttons{
