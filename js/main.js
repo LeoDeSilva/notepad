@@ -52,11 +52,6 @@ function print_html(){
     console.log(note.innerHTML)
 }
 
-//setInterval(function(){
-//  console.log(title.innerHTML)
-//},1000)
-
-
 //------------------------Storing Notes------------------------------
 
 function add_note(){
@@ -82,6 +77,9 @@ function get_note(i){
 function save_HTML(i){
 	console.log(i)
 	notes[i]["title"] = title.innerHTML
+	if (notes[i]["title"].trim() == "") {
+		notes[i]["title"] = "Untitled"
+	}
 	notes[i]["content"] = note.innerHTML
 	update_notes()
 }
