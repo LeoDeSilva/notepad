@@ -21,7 +21,7 @@ button{
 button:hover{
     color: rgb(207, 207, 207);
 }
-button:active{
+.sample-toolbar button:active{
     color: #666;
 }
 .code{
@@ -184,7 +184,21 @@ html, body{
 .login-btn:active{
     filter: brightness(0.85);
 }
-/*@media (max-width: 1700px) {
+
+.trash{
+    font-size:30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.trash:hover{
+    filter: brightness(0.90)
+}
+
+
+
+
+@media (max-width: 1700px) {
     .buttons{
         margin-left: 70%;
     }
@@ -193,4 +207,4 @@ html, body{
     .buttons{
         margin-left: 77%;
     }
-}*/
+}

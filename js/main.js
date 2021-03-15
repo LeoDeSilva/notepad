@@ -1,15 +1,33 @@
 //------------------------Get Elements------------------------------
 note = document.getElementById("note")
 note_list = document.getElementById("list")
-title = document.getElementsByClassName("h")[0]
+title = document.getElementById("title")
 
-notes = []
-index = 0
+let notes 
+
+if (load_from_local() == null){
+	notes = []
+}else{
+	notes = load_from_local()
+}
+
+let index 
+
+if (localStorage.getItem("index") == null){
+	index = 0
+}else{
+	index = localStorage.getItem("index")
+}
 
 if (notes.length <= 0) {
+	console.log("NONTE")
 	add_note()
 	get_note(0)
+}else{
+	get_note(index)
 }
+
+update_notes()
 
 //------------------------Format Commands------------------------------
 
@@ -67,6 +85,15 @@ function update_notes(){
 	}
 }
 
+function delete_note(){
+	notes.splice(index,1)
+	update_notes()
+	if (notes.length <= 0){
+		add_note()
+	}
+	get_note(0)
+}
+
 function get_note(i){
 	title.innerHTML = notes[i]["title"]
 	note.innerHTML = notes[i]["content"]
@@ -81,9 +108,21 @@ function save_HTML(i){
 		notes[i]["title"] = "Untitled"
 	}
 	notes[i]["content"] = note.innerHTML
+	console.log(notes)
 	update_notes()
+	save_to_local()
+}
+
+function save_to_local(){
+	localStorage.setItem("notes",JSON.stringify(notes))
+	localStorage.setItem("index",index)
+}
+
+function load_from_local(){
+	return JSON.parse(localStorage.getItem("notes"))
 }
 
 setInterval(function (){
 	save_HTML(index)
 }, 1000)
+

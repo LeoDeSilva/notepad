@@ -33,11 +33,14 @@
                <button href="javascript:void(0)" onclick="inCode()"><i class='bx bx-code' ></i></button>
                <button href="javascript:void(0)" onclick="format('insertunorderedlist')"><i class='bx bx-list-ul' ></i></button>
                <button href="javascript:void(0)" onclick="format('insertorderedlist')"><i class='bx bx-list-ol' ></i></button>
+					<button onclick="delete_note()" ><i class='bx bx-trash-alt trash'></i></button>
             </div>
         </div>
-        <div class="cont">
-                <h1 contenteditable="true" class="h titles">Untitled</h1>
-            <div id="note" class="editor" spellcheck="false" contenteditable="true">
+				<div class="cont">
+					<span>
+						<h1 id="title" contenteditable="true" class="h titles"></h1>
+					</span>
+					<div id="note" class="editor" spellcheck="false" contenteditable="true">
             </div>
         </div>
     </body>
