@@ -11,11 +11,10 @@
     <body>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Maths</a>
-            <a href="#">German</a>
-            <a href="#">Chicada</a>
-            <a href="#">Computing</a>
-            <a href="#">+ Note</a>
+				<span id="list" class="note_list">
+					
+				</span>
+            <a onclick="add_note()"  href="#">+ Note</a>
         </div>
         <div class="head">
             <button onclick="openNav()" class="menu-btn"><i class='bx bx-menu menu-icon'></i></button>
@@ -24,16 +23,16 @@
                 <button class="login-btn">Login</button>
                 <button class="login-btn">Register</button>
             </span>
-        </div>
-        <div class="tool">
+        	</div>
+        	<div class="tool">
             <div class="sample-toolbar">
-                <button href="javascript:void(0)" onclick="format('bold')"><span>B</span></button>
-                <button href="javascript:void(0)" onclick="format('italic')"><span>I</span></button>
-                <button href="javascript:void(0)" onclick="h('h1','h')"><span>H</span></button>
-                <button href="javascript:void(0)" onclick="h('h3','s')"><span>S</span></button>
-                <button href="javascript:void(0)" onclick="inCode()"><i class='bx bx-code' ></i></button>
-                <button href="javascript:void(0)" onclick="format('insertunorderedlist')"><i class='bx bx-list-ul' ></i></button>
-                <button href="javascript:void(0)" onclick="format('insertorderedlist')"><i class='bx bx-list-ol' ></i></button>
+               <button href="javascript:void(0)" onclick="format('bold')"><span>B</span></button>
+               <button href="javascript:void(0)" onclick="format('italic')"><span>I</span></button>
+               <button href="javascript:void(0)" onclick="insert_tag_with_class('h1','h')"><span>H</span></button>
+               <button href="javascript:void(0)" onclick="insert_tag_with_class('h3','s')"><span>S</span></button>
+               <button href="javascript:void(0)" onclick="inCode()"><i class='bx bx-code' ></i></button>
+               <button href="javascript:void(0)" onclick="format('insertunorderedlist')"><i class='bx bx-list-ul' ></i></button>
+               <button href="javascript:void(0)" onclick="format('insertorderedlist')"><i class='bx bx-list-ol' ></i></button>
             </div>
         </div>
         <div class="cont">
