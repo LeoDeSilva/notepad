@@ -126,3 +126,12 @@ setInterval(function (){
 	save_HTML(index)
 }, 1000)
 
+function open_login(){
+	window.location = "login.html"
+}
+function open_home(){
+	window.location = "index.html"
+}
+function open_register(){
+	window.location = "register.html"
+}

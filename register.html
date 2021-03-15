@@ -17,31 +17,28 @@
             <a onclick="add_note()"  href="#">+ Note</a>
         </div>
         <div class="head">
-            <button onclick="openNav()" class="menu-btn"><i class='bx bx-menu menu-icon'></i></button>
+            <button onclick="open_home()" class="menu-btn"><i class='bx bx-menu menu-icon'></i></button>
             <span>Notes</span>
             <span class="buttons">
                 <button onclick="open_login()" class="login-btn">Login</button>
-                <button onclick="open_register()" class="login-btn">Register</button>
             </span>
         	</div>
-        	<div class="tool">
-            <div class="sample-toolbar">
-               <button href="javascript:void(0)" onclick="format('bold')"><span>B</span></button>
-               <button href="javascript:void(0)" onclick="format('italic')"><span>I</span></button>
-               <button href="javascript:void(0)" onclick="insert_tag_with_class('h1','h')"><span>H</span></button>
-               <button href="javascript:void(0)" onclick="insert_tag_with_class('h3','s')"><span>S</span></button>
-               <button href="javascript:void(0)" onclick="inCode()"><i class='bx bx-code' ></i></button>
-               <button href="javascript:void(0)" onclick="format('insertunorderedlist')"><i class='bx bx-list-ul' ></i></button>
-               <button href="javascript:void(0)" onclick="format('insertorderedlist')"><i class='bx bx-list-ol' ></i></button>
-					<button onclick="delete_note()" ><i class='bx bx-trash-alt trash'></i></button>
-            </div>
-        </div>
 				<div class="cont">
-					<span>
-						<h1 id="title" contenteditable="true" class="h titles"></h1>
-					</span>
-					<div id="note" class="editor" spellcheck="false" contenteditable="true">
-            </div>
+                    <div class="login-page">
+                        <span>
+                            <h1 class="h titles">Register</h1>
+                        </span>
+                        <form class="form">
+                            <div><label for="email">Email:</label></div>
+                            <input type="email" class="form-input" name="email" id="email">
+
+                            <div><label for="password">Password:</label></div>
+                            <input type="password" class="form-input" name="password" id="password">
+
+                            <span class="center"><input type="submit" class="submit-btn"></span>
+                        </form>
+                    </div>
+                </div>
         </div>
     </body>
     <script src="js/main.js"></script>
