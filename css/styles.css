@@ -82,7 +82,7 @@ html, body{
 
 .sample-toolbar{
     position: fixed;
-
+    max-height: 500px;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -100,7 +100,7 @@ html, body{
     font-size: 35px;
 }
 .head{
-    background-color: #292D30;
+    background-color: transparent;
     width: 100%;
     position: absolute;
     color: white;
@@ -210,14 +210,71 @@ html, body{
     padding: 40px;
 }
 
+/*TOOL BAR TODO*/
+
 @media (max-width: 1700px) {
     .buttons{
         margin-left: 70%;
+
     }
+    .sample-toolbar{
+        max-height: 70%;
+
+    }
+    
 }
 @media (min-width: 1540px) {
     .buttons{
         margin-left: 77%;
+
+    }
+    button span{
+        font-size: 30px;
+        margin-bottom: 1px;
+        margin-top: 1px;
+        max-height: 40px;
+
+        width: 10px;
+
+    }
+    button i {
+        font-size: 30px;
+        margin-bottom: 1px;
+        margin-top: 1px;
+        max-height: 30px;
+    }
+    .trash{
+        font-size: 30px;
+    }
+    .sample-toolbar{
+        /*check side*/
+    }
+}
+@media (max-width: 1400px) {
+    .buttons{
+        margin-left: 60%;
+    }
+    button span{
+        font-size: 25px;
+        margin-bottom: 1px;
+        margin-top: 1px;
+        max-height: 40px;
+
+        width: 10px;
+
+    }
+    button i {
+        font-size: 25px;
+        margin-bottom: 1px;
+        margin-top: 1px;
+        max-height: 30px;
+    }
+    .trash{
+        font-size: 25px;
+    }
+    .sample-toolbar{
+        max-width: 60px;
+        max-height: 60%;
     }
 }
 .form-input{
