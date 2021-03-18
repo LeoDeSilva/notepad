@@ -1,17 +1,16 @@
 //------------------------Get Elements------------------------------
-note = document.getElementById("note")
-note_list = document.getElementById("list")
-title = document.getElementById("title")
+let note = document.getElementById("note")
+let note_list = document.getElementById("list")
+let title = document.getElementById("title")
 
 let notes 
+let index
 
 if (load_from_local() == null){
 	notes = []
 }else{
 	notes = load_from_local()
 }
-
-let index 
 
 if (localStorage.getItem("index") == null){
 	index = 0
@@ -34,6 +33,7 @@ update_notes()
 function format(command, value){
    document.execCommand(command, false, value)
 }
+
 const inCode = function() {
   //create code block with print("hello world")
   document.designMode = 'on'
@@ -125,6 +125,9 @@ function load_from_local(){
 setInterval(function (){
 	save_HTML(index)
 }, 1000)
+
+
+//------------------------Navigation------------------------------
 
 function open_login(){
 	window.location = "login.html"

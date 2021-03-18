@@ -79,7 +79,6 @@ html, body{
     display: flex;
     align-items: center;
 }
-
 .sample-toolbar{
     position: fixed;
     max-height: 500px;
@@ -303,6 +302,5 @@ html, body{
 
 .center{
     display: flex;
-
     justify-content: center;
 }
