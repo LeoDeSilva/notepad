@@ -2,7 +2,6 @@
 let note = document.getElementById("note")
 let note_list = document.getElementById("list")
 let title = document.getElementById("title")
-
 let notes 
 let index
 
@@ -19,13 +18,9 @@ if (localStorage.getItem("index") == null){
 }
 
 if (notes.length <= 0) {
-	console.log("NONTE")
 	add_note()
-	get_note(0)
-}else{
-	get_note(index)
 }
-
+get_note(index)
 update_notes()
 
 //------------------------Format Commands------------------------------
@@ -46,11 +41,7 @@ const insert_tag_with_class = function(tag,type) {
   document.execCommand('insertHTML', false, `<${tag} class="${type}">` + window.getSelection().toString() + `</${tag}>`)
   document.designMode = 'off'
 }
-function insert_tag(tag){
-	document.designMode = 'on'
-	document.execCommand('insertHTML', false, `<${tag}>` + window.getSelection().toString() + `</${tag}>`)
-	document.designMode = 'off'
-}
+
 
 //------------------------Navbar Functions------------------------------
 
@@ -91,7 +82,7 @@ function delete_note(){
 	if (notes.length <= 0){
 		add_note()
 	}
-	get_note(0)
+	get_note(0) 
 }
 
 function get_note(i){
@@ -138,3 +129,4 @@ function open_home(){
 function open_register(){
 	window.location = "register.html"
 }
+
