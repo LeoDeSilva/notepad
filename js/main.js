@@ -104,6 +104,9 @@ function save_HTML(i){
 	save_to_local()
 }
 
+
+//------------------------Local Storage------------------------------
+
 function save_to_local(){
 	localStorage.setItem("notes",JSON.stringify(notes))
 	localStorage.setItem("index",index)
@@ -112,10 +115,6 @@ function save_to_local(){
 function load_from_local(){
 	return JSON.parse(localStorage.getItem("notes"))
 }
-
-setInterval(function (){
-	save_HTML(index)
-}, 1000)
 
 
 //------------------------Navigation------------------------------
@@ -130,3 +129,6 @@ function open_register(){
 	window.location = "register.html"
 }
 
+setInterval(function (){
+	save_HTML(index)
+}, 1000)
